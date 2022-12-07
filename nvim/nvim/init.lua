@@ -1,0 +1,2 @@
+-- Required files
+require('plugins')
