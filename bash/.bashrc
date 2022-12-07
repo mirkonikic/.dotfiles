@@ -65,6 +65,7 @@ fi
 #python3 	- CLI PYTHON interpreter
 #ranger		- CLI file explorer
 #recaf		- GUI Java Bytecide editor new
+#rofi		- GUI menu
 #rsactftool	- CLI rsa ctf tool
 #rstudio	- GUI Statistical tool
 #rtv		- CLI reddit client
