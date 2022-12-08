@@ -1,7 +1,10 @@
 
 local opt = vim.opt
 
-vim.g.colors_name = 'gloombuddy'
+vim.opt.signcolumn = 'yes'
+vim.opt.termguicolors = true
+pcall(vim.cmd, 'colorscheme onedark')
+
 opt.backup = false
 opt.cursorline = true
 opt.expandtab = true

@@ -3,4 +3,8 @@ require('plugins')
 require('settings')
 require('keybinds')
 require('autocmd')
-require('lspconfig')
+
+local lsp = require('lsp-zero')
+
+lsp.preset('recommended')
+lsp.setup()
