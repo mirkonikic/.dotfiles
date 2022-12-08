@@ -6,6 +6,7 @@ vim.opt.termguicolors = true
 -- pcall(vim.cmd, 'colorscheme onedark')
 vim.cmd [[colorscheme nightfly]]
 
+opt.relativenumber = true
 opt.backup = false
 opt.cursorline = true
 opt.expandtab = true
