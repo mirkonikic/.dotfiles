@@ -42,12 +42,47 @@ return packer.startup(function(use)
   use 'sheerun/vim-polyglot'
   
   -- Themes
-  use 'joshdick/onedark.vim'
+  use 'bluz71/vim-nightfly-colors'
+  -- use 'joshdick/onedark.vim'
+
+  -- BottomLine
+  use 'feline-nvim/feline.nvim'
 
   -- :ToggleTerm
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end}
+
+  -- FIX: prepraviti TreeSitter plugin, samo to je ostalo
+  --TreeSitter
+  -- use 'nvim-treesitter/nvim-treesitter'
+  
+  -- Todo
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+  
+  -- Trouble
+  -- Lua
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   -- LSP
   use {
@@ -65,12 +100,17 @@ return packer.startup(function(use)
     {'saadparwaiz1/cmp_luasnip'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/cmp-nvim-lua'},
-
+    
     -- Snippets
     {'L3MON4D3/LuaSnip'},
     {'rafamadriz/friendly-snippets'},
   }
 }
+    --Telescope
+    use { -- nice interface for LSP functions (among other things)
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

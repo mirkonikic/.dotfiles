@@ -3,7 +3,8 @@ local opt = vim.opt
 
 vim.opt.signcolumn = 'yes'
 vim.opt.termguicolors = true
-pcall(vim.cmd, 'colorscheme onedark')
+-- pcall(vim.cmd, 'colorscheme onedark')
+vim.cmd [[colorscheme nightfly]]
 
 opt.backup = false
 opt.cursorline = true
