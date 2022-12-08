@@ -1,2 +1,0 @@
--- Required files
-require('plugins')

@@ -48,6 +48,7 @@ fi
 #keytool	- CLI keytool tool
 #kicad		- GUI PCB design tool
 #kismet		- CLI wifi sniffing tool
+#lazygit    - CLI git IDE
 #libreoffice	- GUI Business software packet
 #lynx 		- CLI web browser
 #matlab		- WIN Matlab program
