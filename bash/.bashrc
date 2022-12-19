@@ -5,9 +5,13 @@
 export VISUAL=nvim;
 export EDITOR=nvim;
 
+# tmux list-sessions | grep -v attached | cut -d: -f1 |  xargs -t -n1 tmux kill-session -t
+
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
-    tmux attach || tmux >/dev/null 2>&1
+    tmux new || tmux >/dev/null 2>&1
 fi
+
+tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turning off session: $inp"; tmux kill-session -t $inp; done
 
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] && return
@@ -20,6 +24,7 @@ fi
 #burpsuite	- GUI Proxy software
 #cabal		- CLI haskell build tool
 #code 		- GUI Text Editor
+#cutter     - GUI binary analysis/decompiler program
 #diec		- CLI Detect It Easy, executable analysis tool
 #dnsutils	- CLI dig, host, nslookup
 #docker		- CLI/GUI container environment/virtual machines
@@ -46,6 +51,7 @@ fi
 #jbe		- GUI Java Bytecode Editor
 #john		- CLI Password cracking tool
 #Karat		- WIN Packet Builder Tool
+#kdbg       - GUI linux kernel debugger
 #keytool	- CLI keytool tool
 #kicad		- GUI PCB design tool
 #kismet		- CLI wifi sniffing tool
@@ -65,6 +71,7 @@ fi
 #postman	- GUI REST testing app
 #proxychains-ng	- CLI proxychaining tool
 #python3 	- CLI PYTHON interpreter
+#pwninit    - CLI configure scripts for pwn chall
 #ranger		- CLI file explorer
 #recaf		- GUI Java Bytecide editor new
 #rofi		- GUI menu
@@ -72,6 +79,7 @@ fi
 #rstudio	- GUI Statistical tool
 #rtv		- CLI reddit client
 #rustc		- CLI rust compiler
+#seccomp-tls- CLI seccomp tools
 #snort		- CLI IDS
 #spss		- WIN statistics program
 #telegram-desk	- GUI telegram client
@@ -110,3 +118,4 @@ alias toro="systemctl stop tor.service"		#tor okoncaj
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
+export PATH="$PATH:/opt/010editor" #ADDED BY 010 EDITOR
