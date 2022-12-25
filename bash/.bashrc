@@ -22,7 +22,8 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #ani-cli	- CLI-GUI anime client
 #bettercap	- GUI packet sniffer and modifier
 #burpsuite	- GUI Proxy software
-#cabal		- CLI haskell build tool
+#cargo      - CLI Rust project manager      :lang
+#cabal		- CLI haskell build tool        :lang
 #code 		- GUI Text Editor
 #cutter     - GUI binary analysis/decompiler program
 #diec		- CLI Detect It Easy, executable analysis tool
@@ -31,24 +32,26 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #edb-debugger	- GUI Debugger
 #elfparser	- CLI Tool for analyzing ELF files
 #emulatr	- GUI Android Emulator
-#erl		- CLI Erlang interpreter
+#erl		- CLI Erlang interpreter        :lang
 #ettercap 	- GUI/CLI wireless sniffing
 #firefox	- GUI web browser
 #frotz		- CLI Z-Machine emulator
+#gef        - CLI gdb -> plugin for analyzing binary
 #git		- CLI software versioning tool
-#gcc,gdc,g+ - CLI C, C++ tools
-#ghc		- CLI haskell compiler
-#ghci		- CLI haskell interpreter
+#gcc,gdc,g+ - CLI C, C++ tools              :lang
+#ghc		- CLI haskell compiler          :lang
+#ghci		- CLI haskell interpreter       :lang
+#go         - CLI GO lang compiler          :lang
 #gpsim		- GUI Breadboard simulator
 #hakrawler	- CLI web spidering tool
 #ida		- WIN IDA PRO 32 disassembler
 #ida64		- WIN IDA PRO 64 disassembler
 #ida64l		- LIN IDA PRO 64 disassembler
-#iex		- CLI Elixir interpreter
+#iex		- CLI Elixir interpreter        :lang 
 #i2c-tools	- CLI serial communication protocol tools
-#java		- CLI Java compiler
-#jarsigner	- CLI jarsigner tool
-#jbe		- GUI Java Bytecode Editor
+#java		- CLI Java compiler             :lang
+#jarsigner	- CLI jarsigner tool        
+#jbe		- GUI Java Bytecode Editor 
 #john		- CLI Password cracking tool
 #Karat		- WIN Packet Builder Tool
 #kdbg       - GUI linux kernel debugger
@@ -63,17 +66,19 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #moebius	- GUI ANSI text editor
 #mspaint	- GUI Windows XP paint
 #mutt		- CLI mail client
-#nasm		- CLI assembly compiler
+#nasm		- CLI assembly compiler         :lang
 #nmap 		- CLI network scanning tool
 #ngrok		- CLI tunneling tool 
-#nodejs     - CLI Node js
-#npm        - CLI nodejs package manager
+#nodejs     - CLI Node js                   :lang
+#npm        - CLI nodejs package manager    :lang
 #okteta		- GUI Hexadecimal text editor
 #ollydbg	- GUI Windows .exe i .dll debugger
 #one_gadget - CLI one_gadget finder in binary
+#peda       - CLI gdb -> plugin
 #postman	- GUI REST testing app
 #proxychains-ng	- CLI proxychaining tool
-#python3 	- CLI PYTHON interpreter
+#python3 	- CLI PYTHON interpreter        :lang
+#pwndbg     - CLI gdb -> plugin for bin exec
 #pwninit    - CLI configure scripts for pwn chall
 #ranger		- CLI file explorer
 #recaf		- GUI Java Bytecide editor new
@@ -81,12 +86,13 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #rsactftool	- CLI rsa ctf tool
 #rstudio	- GUI Statistical tool
 #rtv		- CLI reddit client
-#rustc		- CLI rust compiler
+#rustc		- CLI rust compiler             :lang
+#rustup     - CLI Rust package manager      :lang
 #seccomp-tls- CLI seccomp tools
 #snort		- CLI IDS
 #spss		- WIN statistics program
 #telegram-desk	- GUI telegram client
-#tg		- CLI telegram client
+#tg		    - CLI telegram client
 #tmux		- CLI terminal multiplexer
 #tor		- CLI Tor network
 #tor-browser 	- GUI Proxy chain that routes traffic trough tor
@@ -118,6 +124,12 @@ alias torp="systemctl start tor.service"	#tor pocni
 alias tori="systemctl status tor.service"	#tor info
 alias toro="systemctl stop tor.service"		#tor okoncaj
 #NAPRAVI ALIAS tor = systemctl start tor.service i stop tor.service i status tor.service
+
+# alias za gdb plugine
+alias peda='gdb -q -ex init-peda'
+alias gef='gdb -q -ex init-gef'
+alias pwndbg='gdb -q -ex init-pwndbg'
+
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
