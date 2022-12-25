@@ -36,7 +36,7 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #firefox	- GUI web browser
 #frotz		- CLI Z-Machine emulator
 #git		- CLI software versioning tool
-#gcc,gdc,g++	- CLI C, C++ tools
+#gcc,gdc,g+ - CLI C, C++ tools
 #ghc		- CLI haskell compiler
 #ghci		- CLI haskell interpreter
 #gpsim		- GUI Breadboard simulator
@@ -56,7 +56,7 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #kicad		- GUI PCB design tool
 #kismet		- CLI wifi sniffing tool
 #lazygit    - CLI git IDE
-#libreoffice	- GUI Business software packet
+#libreoffic - GUI Business software packet
 #lynx 		- CLI web browser
 #matlab		- WIN Matlab program
 #metasploit	- CLI hacking tool
@@ -66,8 +66,11 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #nasm		- CLI assembly compiler
 #nmap 		- CLI network scanning tool
 #ngrok		- CLI tunneling tool 
+#nodejs     - CLI Node js
+#npm        - CLI nodejs package manager
 #okteta		- GUI Hexadecimal text editor
 #ollydbg	- GUI Windows .exe i .dll debugger
+#one_gadget - CLI one_gadget finder in binary
 #postman	- GUI REST testing app
 #proxychains-ng	- CLI proxychaining tool
 #python3 	- CLI PYTHON interpreter
