@@ -25,7 +25,9 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #cargo      - CLI Rust project manager      :lang
 #cabal		- CLI haskell build tool        :lang
 #code 		- GUI Text Editor
+#composer   - CLI php package manager
 #cutter     - GUI binary analysis/decompiler program
+#dbeaver    - GUI mysql client
 #diec		- CLI Detect It Easy, executable analysis tool
 #dnsutils	- CLI dig, host, nslookup
 #docker		- CLI/GUI container environment/virtual machines
@@ -59,6 +61,7 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #kicad		- GUI PCB design tool
 #kismet		- CLI wifi sniffing tool
 #lazygit    - CLI git IDE
+#lf         - CLI file explorer faster than ranger
 #libreoffic - GUI Business software packet
 #lynx 		- CLI web browser
 #matlab		- WIN Matlab program
@@ -75,12 +78,12 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #ollydbg	- GUI Windows .exe i .dll debugger
 #one_gadget - CLI one_gadget finder in binary
 #peda       - CLI gdb -> plugin
+#php        - CLI php interpreter           :lang
 #postman	- GUI REST testing app
 #proxychains-ng	- CLI proxychaining tool
 #python3 	- CLI PYTHON interpreter        :lang
 #pwndbg     - CLI gdb -> plugin for bin exec
 #pwninit    - CLI configure scripts for pwn chall
-#ranger		- CLI file explorer
 #recaf		- GUI Java Bytecide editor new
 #rofi		- GUI menu
 #rsactftool	- CLI rsa ctf tool
@@ -134,3 +137,4 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 export PATH="$PATH:/opt/010editor" #ADDED BY 010 EDITOR
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"

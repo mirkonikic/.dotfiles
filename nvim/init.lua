@@ -1,13 +1,13 @@
 -- Required files
---
 require('plugins')
 require('settings')
-require('keybinds')
-require('autocmd')
-require('feline').setup()
-require('lsp-zero')
-local lsp = require('lsp-zero')
--- require("tree-sitter")
+require('plugin_config')
+-- require('keybinds')
 
-lsp.preset('recommended')
-lsp.setup()
+-- require('autocmd')
+
+-- require('lsp-zero')
+-- require "user.lsp"
+-- local lsp = require('lsp-zero')
+-- lsp.preset('recommended')
+-- lsp.setup()
