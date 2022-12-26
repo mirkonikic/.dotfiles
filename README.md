@@ -22,8 +22,10 @@ My dotfiles
 - [ ]   Auto close brackets nvim plugin -> potrazi u TODO-ima u plugins.lua
 - [ ]   Which key -> dok kucam key binds, ispisuje sve mogucnosti ispod
 - [ ] tmux:
+- [x]   tmp package manager installed
+- [x]   dracula theme
+- [x]   extrakto -> plugin to repeat any text from display
 - [ ] alacritty:
 - [ ] WM;dwm;bspwm;awesome;i3:
 - [ ] lf:
 - [ ] rofi:
-- [ ] bash:
