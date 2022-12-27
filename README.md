@@ -13,14 +13,12 @@ My dotfiles
 - [x]   Barbecue -> Show in which block of code is cursor
 - [x]   ToggleTerm -> Terminal without closing
 - [ ]   Fix icons
-- [ ]   Keybinds -> ToggleTerm float i horizontal, Telescope symbols i TodoTelescope ili TodoLocList
+- [x]   Keybinds -> ToggleTerm float i horizontal, Telescope symbols i TodoTelescope ili TodoLocList
 - [ ]   Fix pretty-folding plugin
-- [ ]   Napravi precicu za git integraciju -> :TermExec cmd='lazygit' direction=float
-- [ ]   CodeSnippet runner -> izvrsi samo deo koda
+- [x]   Napravi precicu za git integraciju -> :TermExec cmd='lazygit' direction=float
 - [ ]   jbuyki instant -> za kolaboraciju online Cli/Server arhitektura
-- [ ]   Nvim shortcut printer
-- [ ]   Auto close brackets nvim plugin -> potrazi u TODO-ima u plugins.lua
-- [ ]   Which key -> dok kucam key binds, ispisuje sve mogucnosti ispod
+- [ ]   Nvim shortcut printer - ispise mogucnosti komandi
+- [x]   Auto close brackets nvim plugin -> potrazi u TODO-ima u plugins.lua
 - [ ] tmux:
 - [x]   tmp package manager installed
 - [x]   dracula theme

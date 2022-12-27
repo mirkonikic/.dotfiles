@@ -39,6 +39,7 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #firefox	- GUI web browser
 #frotz		- CLI Z-Machine emulator
 #gef        - CLI gdb -> plugin for analyzing binary
+#gem        - CLI ruby package manager  :lang
 #git		- CLI software versioning tool
 #gcc,gdc,g+ - CLI C, C++ tools              :lang
 #ghc		- CLI haskell compiler          :lang
@@ -54,6 +55,7 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #java		- CLI Java compiler             :lang
 #jarsigner	- CLI jarsigner tool        
 #jbe		- GUI Java Bytecode Editor 
+#jekyll - CLI Jekyll static website interpreter   :lang
 #john		- CLI Password cracking tool
 #Karat		- WIN Packet Builder Tool
 #kdbg       - GUI linux kernel debugger
