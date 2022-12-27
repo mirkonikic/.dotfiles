@@ -2,7 +2,7 @@
 require('plugins')
 require('settings')
 require('plugin_config')
--- require('keybinds')
+require('keybinds')
 
 -- require('autocmd')
 

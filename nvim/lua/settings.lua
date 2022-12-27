@@ -10,6 +10,7 @@ vim.cmd [[
 -- vim.cmd [[colorscheme nightfly]]
 
 vim.cmd("ownsyntax off")
+opt.timeoutlen = 0
 opt.relativenumber = true
 opt.backup = false
 opt.cursorline = true

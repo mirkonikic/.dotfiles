@@ -9,8 +9,6 @@ local ensure_packer = function()
   return false
 end
 
--- TODO: popravi ovaj deo, ne radi dugme
-
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)  -- Packer  
@@ -84,6 +82,17 @@ return require('packer').startup(function(use)  -- Packer
     end,
   })
 
+  -- Lightspeed
+  use 'ggandor/lightspeed.nvim'
+
+  -- AutoClose brackets
+  use {
+    'm4xshen/autoclose.nvim',
+    config = function ()
+      require("autoclose").setup({})
+    end
+  }
+
   -- Todo
   use {
   "folke/todo-comments.nvim",
@@ -95,7 +104,7 @@ return require('packer').startup(function(use)  -- Packer
       -- refer to the configuration section below
     }
   end
-}
+  }
 
   -- NOTE: instalirani plugini:
   -- NvimTree   -> filesystem tab -> Ctrl+n start -> a newFile -> r renameFile -> d deleteFIle
@@ -105,18 +114,18 @@ return require('packer').startup(function(use)  -- Packer
   -- LuaLine    -> bottom line -> uredi, dodaj git itd, jezik
   -- TokyoNight -> dark theme -> tokyonight - [night, storm, moon, day]
   -- Barbecue   -> show in which block of code is the cursor
+  -- Keybindings-> CTRL+i:lazygit -> CTRL+o:Telescope_grep -> CTRL+p:Telescope_find -> CTRL+u:ToggleTermFloat -> CTRL+j:ToggleTermHoriz -> CTRL+k:TodoTelescope
   -- ToggleTerm -> Terminal -> implementirati direction float i directioni bottom na dva razlicita keybinda
+  -- LightSpeed -> Move trough file faster -> s:forward ; S:backwars search
+  -- https://github.com/m4xshen/autoclose.nvim  -> Close automatically brackets 
+
+
   -- TODO:
   -- Fix icons -> za sad pokazuje kockice samo
-  -- git integracija -> napravi key binding -> :TermExec cmd='lazygit' direction=float
   -- Web browser integration -> url -> open in chrome
-  -- Implement keybinds: ToggleTerm [:ToggleTerm size=40 direction=horizontal] i [:ToggleTerm direction=float], Telescope [Ctrl+o grep] i [Ctrl+p files] i [Ctrl+X symbols], Todo [Ctrl+X :TodoTelescope]
-  -- CodeSnippet runner -> da izvrsi deo koda koji selektujem
   -- jbuyki instant.nvim -> collaborate at the same time -> pokreni server i join na server 
   -- Nvim shortcut printer -> neka funkcija koja ce da ispise sve key bindinge koje imam
   -- Fold, preview and unfold brackets etc, olaksa da vidim kod na space
-  -- Auto close brackets -> https://github.com/m4xshen/autoclose.nvim -> za svaku otvorenu ubaci se i zatvorena zagrada
-  -- Which Key -> kad krenes da kucas komandu, pokaze ti sve moguce -> https://github.com/folke/which-key.nvim
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
