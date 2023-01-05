@@ -16,6 +16,8 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] && return
 
+# TODO: create tools by categories -> #pwn #programming...
+
 #aircrack-ng	- CLI wireless hacking tool
 #android-studio	- GUI Android Development IDE
 #angr-management- GUI ANGR gui tool
@@ -57,11 +59,13 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #jbe		- GUI Java Bytecode Editor 
 #jekyll - CLI Jekyll static website interpreter   :lang
 #john		- CLI Password cracking tool
+#kaitai   - CLI look trough your ELF interactively  :pwn
 #Karat		- WIN Packet Builder Tool
 #kdbg       - GUI linux kernel debugger
 #keytool	- CLI keytool tool
 #kicad		- GUI PCB design tool
 #kismet		- CLI wifi sniffing tool
+#laravel  - CLI laravel project manager           :lang
 #lazygit    - CLI git IDE
 #lf         - CLI file explorer faster than ranger
 #libreoffic - GUI Business software packet
@@ -72,13 +76,17 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #mspaint	- GUI Windows XP paint
 #mutt		- CLI mail client
 #nasm		- CLI assembly compiler         :lang
+#nm       - CLI binary analysis tool    :pwn
 #nmap 		- CLI network scanning tool
 #ngrok		- CLI tunneling tool 
 #nodejs     - CLI Node js                   :lang
 #npm        - CLI nodejs package manager    :lang
+#objcopy    - CLI binary analysis           :pwn
+#objdump    - CLI binary analysis           :pwn
 #okteta		- GUI Hexadecimal text editor
 #ollydbg	- GUI Windows .exe i .dll debugger
 #one_gadget - CLI one_gadget finder in binary
+#patchelf   - CLI change some ELF symbols
 #peda       - CLI gdb -> plugin
 #php        - CLI php interpreter           :lang
 #postman	- GUI REST testing app
@@ -96,6 +104,7 @@ tmux ls | grep -v "(attached)" | cut -d ":" -f 1 | while read inp; do echo "turn
 #seccomp-tls- CLI seccomp tools
 #snort		- CLI IDS
 #spss		- WIN statistics program
+#strip    - CLI binary analysis - strip your binary   :pwn
 #telegram-desk	- GUI telegram client
 #tg		    - CLI telegram client
 #tmux		- CLI terminal multiplexer
